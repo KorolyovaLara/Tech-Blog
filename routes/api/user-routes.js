@@ -79,7 +79,7 @@ router.post("/logout", (req, res) => {
 });
 
 // Update User
-router.put("/:id", withAuth, (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   try {
     const userData = await User.update(req.body, {
       where: {

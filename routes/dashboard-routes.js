@@ -46,7 +46,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
 });
 
 // Edit a post
-router.get("/edit/:id", withAuth, (req, res) => {
+router.get("/edit/:id", withAuth, async (req, res) => {
   try {
     const userPost = await Post.findOne({
       where: {
