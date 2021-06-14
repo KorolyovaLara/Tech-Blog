@@ -70,7 +70,6 @@ router.get("/login", (req, res) => {
     res.redirect("/dashboard");
     return;
   }
-
   res.render("login");
 });
 

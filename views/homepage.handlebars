@@ -1,15 +1,11 @@
-{{>nav }}
-
+{{> nav}}
 
 <div class="container">
     
-  <ol class="post-list">
-    <!-- posts array -->
-    {{#each posts as |post|}}
-      <ul>
-          {{> post-info post }}
-      </ul>
-    {{/each}}
-  </ol>
+  {{#each posts}}
+  <a href="/post/{{id}}">
+      {{> post-info }}
+  </a>
+  {{/each}}
   
 </div>
